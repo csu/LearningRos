@@ -1,0 +1,62 @@
+christophersu@unimate:~/catkin_ws$ roslaunch pr2_interactive_manipulation pr2_interactive_manipulation_robot.launch sim:=true
+... logging to /home/christophersu/.ros/log/b3e34d64-da29-11e3-8040-b8ca3ab4ad21/roslaunch-unimate-16057.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+while processing /opt/ros/groovy/stacks/pr2_object_manipulation/manipulation/pr2_object_manipulation_launch/launch/pr2_manipulation_prerequisites.launch:
+while processing /opt/ros/groovy/stacks/pr2_object_manipulation/manipulation/pr2_object_manipulation_launch/launch/laser+stereo-perception.launch:
+Invalid <arg> tag: openni_launch
+ROS path [0]=/opt/ros/groovy/share/ros
+ROS path [1]=/home/christophersu/catkin_ws/
+ROS path [2]=/home/christophersu/catkin_ws/src
+ROS path [3]=/opt/ros/groovy/share
+ROS path [4]=/opt/ros/groovy/stacks. 
+
+Arg xml is <arg name="kinect_launchfile" unless="$(arg use_freenect)" value="$(find openni_launch)/launch/openni.launch"/>
+christophersu@unimate:~/catkin_ws$ roslaunch ar_track_alvar kinect.launch
+... logging to /home/christophersu/.ros/log/b3e34d64-da29-11e3-8040-b8ca3ab4ad21/roslaunch-unimate-16066.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+Traceback (most recent call last):
+  File "/opt/ros/groovy/lib/python2.7/dist-packages/roslaunch/__init__.py", line 279, in main
+    p.start()
+  File "/opt/ros/groovy/lib/python2.7/dist-packages/roslaunch/parent.py", line 257, in start
+    self._start_infrastructure()
+  File "/opt/ros/groovy/lib/python2.7/dist-packages/roslaunch/parent.py", line 206, in _start_infrastructure
+    self._load_config()
+  File "/opt/ros/groovy/lib/python2.7/dist-packages/roslaunch/parent.py", line 121, in _load_config
+    self.config = roslaunch.config.load_config_default(self.roslaunch_files, self.port, verbose=self.verbose)
+  File "/opt/ros/groovy/lib/python2.7/dist-packages/roslaunch/config.py", line 428, in load_config_default
+    loader.load(f, config, verbose=verbose)
+  File "/opt/ros/groovy/lib/python2.7/dist-packages/roslaunch/xmlloader.py", line 698, in load
+    self._load_launch(launch, ros_config, is_core=core, filename=filename, argv=argv, verbose=verbose)
+  File "/opt/ros/groovy/lib/python2.7/dist-packages/roslaunch/xmlloader.py", line 670, in _load_launch
+    self._recurse_load(ros_config, launch.childNodes, self.root_context, None, is_core, verbose)
+  File "/opt/ros/groovy/lib/python2.7/dist-packages/roslaunch/xmlloader.py", line 634, in _recurse_load
+    val = self._include_tag(tag, context, ros_config, default_machine, is_core, verbose)
+  File "/opt/ros/groovy/lib/python2.7/dist-packages/roslaunch/xmlloader.py", line 95, in call
+    return f(*args, **kwds)
+  File "/opt/ros/groovy/lib/python2.7/dist-packages/roslaunch/xmlloader.py", line 553, in _include_tag
+    inc_filename = self.resolve_args(tag.attributes['file'].value, context)
+  File "/opt/ros/groovy/lib/python2.7/dist-packages/roslaunch/xmlloader.py", line 159, in resolve_args
+    return substitution_args.resolve_args(args, context=context.resolve_dict, resolve_anon=self.resolve_anon)
+  File "/opt/ros/groovy/lib/python2.7/dist-packages/roslaunch/substitution_args.py", line 299, in resolve_args
+    resolved = _resolve_args(resolved, context, resolve_anon, commands)
+  File "/opt/ros/groovy/lib/python2.7/dist-packages/roslaunch/substitution_args.py", line 312, in _resolve_args
+    resolved = commands[command](resolved, a, args, context)
+  File "/opt/ros/groovy/lib/python2.7/dist-packages/roslaunch/substitution_args.py", line 137, in _find
+    return _find_executable(resolve_without_path, a, [args[0], path], context)
+  File "/opt/ros/groovy/lib/python2.7/dist-packages/roslaunch/substitution_args.py", line 173, in _find_executable
+    full_path = _get_executable_path(rp.get_path(args[0]), path)
+  File "/usr/lib/pymodules/python2.7/rospkg/rospack.py", line 190, in get_path
+    raise ResourceNotFound(name, ros_paths=self._ros_paths)
+ResourceNotFound: openni_launch
+ROS path [0]=/opt/ros/groovy/share/ros
+ROS path [1]=/home/christophersu/catkin_ws/
+ROS path [2]=/home/christophersu/catkin_ws/src
+ROS path [3]=/opt/ros/groovy/share
+ROS path [4]=/opt/ros/groovy/stacks
+christophersu@unimate:~/catkin_ws$ 

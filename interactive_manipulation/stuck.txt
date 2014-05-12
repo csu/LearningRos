@@ -1,0 +1,107 @@
+hristophersu@unimate:~/LearningRos$ sudo apt-get install ros-groovy-openni-camera
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ ros-groovy-openni-camera : Depends: libopenni0 but it is not going to be installed
+                            Depends: libopenni-dev but it is not going to be installed
+                            Depends: libopenni-sensor-primesense-dev but it is not going to be installed
+E: Unable to correct problems, you have held broken packages.
+christophersu@unimate:~/LearningRos$ ^C
+christophersu@unimate:~/LearningRos$ ^C
+christophersu@unimate:~/LearningRos$ ^C
+christophersu@unimate:~/LearningRos$ apt-mark showhold 
+christophersu@unimate:~/LearningRos$ sudo aptitude install ros-groovy-openni-launch
+The following NEW packages will be installed:
+  libopenni-dev{a} libopenni-sensor-primesense-dev{a} libopenni-sensor-primesense0{a} libopenni0{ab} 
+  openni-utils{a} ros-groovy-openni-camera{a} ros-groovy-openni-launch 
+The following packages will be REMOVED:
+  linux-headers-3.2.0-60{u} linux-headers-3.2.0-60-generic{u} 
+0 packages upgraded, 7 newly installed, 2 to remove and 2 not upgraded.
+Need to get 1,406 kB of archives. After unpacking 62.3 MB will be freed.
+The following packages have unmet dependencies:
+ libopenni0 : Conflicts: openni-dev but 1.3.2.1-4+precise2 is installed.
+The following actions will resolve these dependencies:
+
+      Remove the following packages:           
+1)      libpcl-1.7-all                         
+2)      libpcl-1.7-all-dev                     
+3)      libpcl-1.7-bin                         
+4)      libpcl-all                             
+5)      libpcl-apps-1.7-dev                    
+6)      libpcl-io-1.7                          
+7)      libpcl-io-1.7-dev                      
+8)      libpcl-outofcore-1.7-dev               
+9)      libpcl-people-1.7-dev                  
+10)     libpcl-recognition-1.7-dev             
+11)     libpcl-visualization-1.7               
+12)     libpcl-visualization-1.7-dev           
+13)     openni-dev                             
+14)     ps-engine                              
+15)     ros-hydro-base-local-planner           
+16)     ros-hydro-carrot-planner               
+17)     ros-hydro-clear-costmap-recovery       
+18)     ros-hydro-costmap-2d                   
+19)     ros-hydro-depth-image-proc             
+20)     ros-hydro-desktop-full                 
+21)     ros-hydro-dwa-local-planner            
+22)     ros-hydro-gazebo-plugins               
+23)     ros-hydro-gazebo-ros                   
+24)     ros-hydro-gazebo-ros-pkgs              
+25)     ros-hydro-image-pipeline               
+26)     ros-hydro-mobile                       
+27)     ros-hydro-move-base                    
+28)     ros-hydro-move-slow-and-clear          
+29)     ros-hydro-moveit-commander             
+30)     ros-hydro-moveit-full                  
+31)     ros-hydro-moveit-full-pr2              
+32)     ros-hydro-moveit-planners              
+33)     ros-hydro-moveit-planners-ompl         
+34)     ros-hydro-moveit-pr2                   
+35)     ros-hydro-moveit-ros                   
+36)     ros-hydro-moveit-ros-benchmarks        
+37)     ros-hydro-moveit-ros-benchmarks-gui    
+38)     ros-hydro-moveit-ros-manipulation      
+39)     ros-hydro-moveit-ros-move-group        
+40)     ros-hydro-moveit-ros-perception        
+41)     ros-hydro-moveit-ros-planning          
+42)     ros-hydro-moveit-ros-planning-interface
+43)     ros-hydro-moveit-ros-robot-interaction 
+44)     ros-hydro-moveit-ros-visualization     
+45)     ros-hydro-moveit-ros-warehouse         
+46)     ros-hydro-moveit-setup-assistant       
+47)     ros-hydro-nav-core                     
+48)     ros-hydro-navfn                        
+49)     ros-hydro-navigation                   
+50)     ros-hydro-pcl-conversions              
+51)     ros-hydro-pcl-ros                      
+52)     ros-hydro-perception                   
+53)     ros-hydro-perception-pcl               
+54)     ros-hydro-pr2-moveit-config            
+55)     ros-hydro-pr2-moveit-tutorials         
+56)     ros-hydro-rotate-recovery              
+57)     ros-hydro-simulators                   
+
+
+
+Accept this solution? [Y/n/q/?] n
+The following actions will resolve these dependencies:
+
+     Keep the following packages at their current version:
+1)     libopenni-dev [Not Installed]                      
+2)     libopenni-sensor-primesense-dev [Not Installed]    
+3)     libopenni-sensor-primesense0 [Not Installed]       
+4)     libopenni0 [Not Installed]                         
+5)     openni-utils [Not Installed]                       
+6)     ros-groovy-openni-camera [Not Installed]           
+7)     ros-groovy-openni-launch [Not Installed]           
+
+
+
+Accept this solution? [Y/n/q/?] q
