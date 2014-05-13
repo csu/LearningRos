@@ -1,3 +1,7 @@
+# Ros
+src/
+devel/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
