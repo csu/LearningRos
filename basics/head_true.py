@@ -23,7 +23,8 @@ if __name__ == "__main__":
     head_goal = PointHeadGoal()
     head_goal.target.header.frame_id = 'base_link'
     head_goal.min_duration = rospy.Duration(1.0)
-    head_goal.target.point = Point(1, 0, 1) # look forward!
+    # head_goal.target.point = Point(1, 0, 1) # look forward!
+    head_goal.target.point = Point(1, 0, 0.5) # look forward!
     head_client.send_goal(head_goal)
     head_client.wait_for_result(rospy.Duration(10.0))
     if (head_client.get_state() != GoalStatus.SUCCEEDED):
