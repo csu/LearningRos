@@ -168,9 +168,9 @@ class GripperMarkers:
     def get_matrix_from_pose(pose):
         rotation = [pose.orientation.x, pose.orientation.y,
                 pose.orientation.z, pose.orientation.w]
-                transformation = tf.transformations.quaternion_matrix(rotation)
-                position = [pose.position.x, pose.position.y, pose.position.z]
-                transformation[:3, 3] = position
+        transformation = tf.transformations.quaternion_matrix(rotation)
+        position = [pose.position.x, pose.position.y, pose.position.z]
+        transformation[:3, 3] = position
         return transformation
 
     def _make_mesh_marker(self):
