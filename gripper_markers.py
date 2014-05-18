@@ -160,9 +160,8 @@ class GripperMarkers:
         transform = GripperMarkers.get_matrix_from_pose(pose)
         offset_array = [GripperMarkers._offset, 0, 0]
         offset_transform = tf.transformations.translation_matrix(offset_array)
-        hand_transform = tf.transformations.concatenate_matrices(transform,
-                                                             offset_transform)
-    	return GripperMarkers.get_pose_from_transform(hand_transform)
+        hand_transform = tf.transformations.concatenate_matrices(transform, offset_transform)
+        return GripperMarkers.get_pose_from_transform(hand_transform)
 
     @staticmethod
     def get_matrix_from_pose(pose):
