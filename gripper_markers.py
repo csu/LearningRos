@@ -150,10 +150,10 @@ class GripperMarkers:
 
     @staticmethod
     def get_pose_from_transform(transform):
-	pos = transform[:3,3].copy()
-	rot = tf.transformations.quaternion_from_matrix(transform)
-	return Pose(Point(pos[0], pos[1], pos[2]),
-			Quaternion(rot[0], rot[1], rot[2], rot[3]))
+		pos = transform[:3,3].copy()
+		rot = tf.transformations.quaternion_from_matrix(transform)
+		return Pose(Point(pos[0], pos[1], pos[2]),
+				Quaternion(rot[0], rot[1], rot[2], rot[3]))
 
     @staticmethod
     def _offset_pose(pose):
@@ -162,7 +162,7 @@ class GripperMarkers:
         offset_transform = tf.transformations.translation_matrix(offset_array)
         hand_transform = tf.transformations.concatenate_matrices(transform,
                                                              offset_transform)
-    return GripperMarkers.get_pose_from_transform(hand_transform)
+    	return GripperMarkers.get_pose_from_transform(hand_transform)
 
     @staticmethod
     def get_matrix_from_pose(pose):
